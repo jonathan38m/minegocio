@@ -34,6 +34,8 @@
     "mainAddress": "Main Street Oe1",
     "mainCity": "Quito"
 }
+```
+---
 
 ### 🔹 PersonUpdateDTO
 ```json
@@ -43,7 +45,19 @@
     "email": "jonathan38m@gmail.com",
     "cellphone": "0963855725"
 }
+```
+---
 
+### 🔹 AddressDTO
+```json
+{
+    "address": "Stree 1 and Av. 10 de Agosto",
+    "city": "Quito",
+    "province": "Pichincha",
+    "postalCode": "EC1023",
+    "isMain": 0
+}
+```
 ---
 
 ### 🔹 Error Responses
