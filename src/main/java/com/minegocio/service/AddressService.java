@@ -24,10 +24,11 @@ public class AddressService {
     public void addAddressToCustomer(Long id, AddressDTO dto) {
         Person person = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Person not found"));
+        Address address = dto.ToEntity();
         if (dto.isMain()) {
             person.getAddresses().forEach(a -> a.setMain(false));
+            person.setMainAddress(address);
         }
-        Address address = dto.ToEntity();
         address.setPerson(person);
         addressRepository.save(address);
     }

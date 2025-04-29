@@ -1,7 +1,15 @@
 package com.minegocio.model.dto;
 
+import com.minegocio.validation.UniquePerson;
+
+import javax.validation.constraints.NotBlank;
+
+@UniquePerson
 public class PersonUpdateDTO {
 
+    @NotBlank
+    private String identificationType;
+    @NotBlank
     private String identificationNumber;
 
     private String name;
@@ -12,6 +20,14 @@ public class PersonUpdateDTO {
 
     public String getIdentificationNumber() {
         return identificationNumber;
+    }
+
+    public String getIdentificationType() {
+        return identificationType;
+    }
+
+    public void setIdentificationType(String identificationType) {
+        this.identificationType = identificationType;
     }
 
     public void setIdentificationNumber(String identificationNumber) {
